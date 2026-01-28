@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="us">
+    <head>
+        <meta charset="UTF-8">
+        <title>choose.v1.0.0</title>
+        <script src="choose.js"></script>
+        <link rel="stylesheet" href="choose.css">
+    </head>
+
+    <body onload="configure()">
+        <div id="main">
+            <div id="symbol" 
+                style="font-size: 2.6rem; text-align: center;" 
+                onclick="event.stopPropagation(); tracer.back(); ">⬅️</div>
+            <div id="label">Choose</div>
+            <div id="tools">
+                <span
+                    class="subtool"
+                    onclick="event.stopPropagation(); save();">💾</span>
+
+                <span
+                    class="subtool"
+                    onclick="event.stopPropagation(); dump();">🗑️</span>
+            </div>
+            <div id="content"></div>
+            <div id="side"></div>
+            <div id="tails"></div>
+        </div>
+    </body>
+</html>

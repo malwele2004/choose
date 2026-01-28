@@ -1,0 +1,130 @@
+html {
+    font-size: 16px;
+
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    width: 100dvw;
+    height: 100dvh;
+
+    overflow: hidden;
+    user-select: none;
+}
+
+body {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+
+    min-width: 100%;
+    min-height: 100%;
+    
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#tails {
+    grid-area: y;
+    background-color:cadetblue;
+    font-weight: bold;
+    align-content: center;
+}
+
+#main {
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, 60px) 1fr repeat(3, 80px);
+    grid-template-rows: 60px 6fr 1fr; 
+    grid-template-areas:
+        "a c c c c e e"
+        "d d d d k k k"
+        "y y y y y y y";
+}
+
+#symbol {
+    grid-area: a;
+    background-color: aquamarine;
+}
+
+#label {
+    grid-area: c;
+    background-color: peru;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#tools {
+    grid-area: e;
+    background-color: yellowgreen;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: end;
+    padding: 5px 5px 0 5px;
+}
+
+#content {
+    grid-area: d;
+    background-color: red;
+    padding: 20px 30px 30px 20px;
+    font-size: 1.5rem;
+    overflow-y: scroll;
+}
+
+#side {
+    grid-area: k;
+    background-color: darkgoldenrod;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 35px;
+    padding: 5px 10px 10px 5px;
+}
+
+#side div:active, .spanFlash:active {
+    background-color: whitesmoke;
+}
+
+.spanFlash {
+    padding: 0 20px 0 20px;
+    font-size: 1.5rem;
+}
+
+.miniScreen {
+    overflow-y: scroll;
+    max-height: 170px;
+    height: fit-content;
+    background-color: crimson;
+}
+
+input, textarea {
+    font-size: 1.5rem;
+    width: 800px;
+}
+
+textarea {
+    height: 160px;
+}
+
+ol {
+    margin: 0;
+}
+
+.subtool {
+    font-size: 2rem;
+}
+
+.subtool:active {
+    background-color: whitesmoke;
+}
+
+.subtool:hover {
+    opacity: 0.5;
+}
